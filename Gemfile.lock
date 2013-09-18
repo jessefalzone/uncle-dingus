@@ -38,6 +38,8 @@ GEM
       mini_portile (~> 0.5.0)
     ntlm-http (0.1.1)
     origin (1.1.0)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     tzinfo (0.3.37)
     unf (0.1.2)
       unf_ext
@@ -52,3 +54,4 @@ DEPENDENCIES
   mechanize
   mongoid
   nokogiri
+  rest-client
