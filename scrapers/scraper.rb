@@ -3,11 +3,13 @@ require 'rest-client'
 require 'mongoid'
 
 doc = Nokogiri::HTML(RestClient.get('http://www.esquire.com/drinks/drinks-full-list/'))
+
 names = doc.css(".result_content h2")
-name_array = [""]
-names.each { |name| name_array << "#{name.text}" }
+name_array = Array.new
+
+names.each { |name| name_array << name.text }
+
 puts name_array
-puts names.length
 
 recipes = doc.css(".result_content ul")
 recipe_array = Array.new
