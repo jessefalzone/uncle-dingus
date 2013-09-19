@@ -4,11 +4,13 @@ require 'mongoid'
 
 doc = Nokogiri::HTML(RestClient.get('http://www.esquire.com/drinks/drinks-full-list/'))
 names = doc.css(".result_content h2")
-names.each { |name| puts "#{name.text}\n"}
+name_array = [""]
+names.each { |name| name_array << "#{name.text}" }
+puts name_array
 puts names.length
 
 recipes = doc.css(".result_content ul")
-array = Array.new
+recipe_array = Array.new
 
 recipes.each do |recipe|
   recipe_string = ""
@@ -16,9 +18,9 @@ recipes.each do |recipe|
   items.each do |item|
     recipe_string += "#{item.text.strip}\n"
   end
-  array << recipe_string
-  array << "--------------------------"
+  recipe_array << recipe_string
+  recipe_array << "--------------------------"
 end
 
-puts array
+puts recipe_array
 
