@@ -6,9 +6,9 @@ class ScraperManifest
   # @other = OtherScraper.new
   end
 
-  def scrape
-    @esquire.run
-  # @other.run
+  def run
+    @esquire.scrape
+  # @other.scrape
   end
 
 end
@@ -17,5 +17,5 @@ end
 require_relative 'esquire_scraper'
 #require_relative 'other_scraper'
 s = ScraperManifest.new
-s.scrape
+s.run
 
