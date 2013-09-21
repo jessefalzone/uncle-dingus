@@ -1,5 +1,9 @@
 #!/usr/bin/env ruby
 
+require './esquire_scraper'
+require './enigma'
+
+
 class ScraperManifest
   def initialize
     @esquire = EsquireScraper.new
@@ -13,9 +17,6 @@ class ScraperManifest
 
 end
 
-
-require_relative 'esquire_scraper'
-#require_relative 'other_scraper'
 s = ScraperManifest.new
 s.run
 
