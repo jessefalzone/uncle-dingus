@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-TopShelf::Application.config.secret_key_base = '76fc99cdc703df5e1ce53d307dd1a628d69dd2d492778eef8bcd617087366f15d3ced4a81fc1a7c381124f3ad6c7a7b94579605e3c85cf0af61c58a20bb25e55'
+TopShelf::Application.config.secret_key_base = 'a32b216d6004d25f259845b4a100ad1b911dce4124b0ac5432552bd8627c11f7c564d907300227afd81b1057025e42676689e5719dbbc06f62e0d2686089f3f4'
